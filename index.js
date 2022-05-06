@@ -16,8 +16,8 @@ axios(dest)
     const articles = [];
 
     $('.ad-list-item-link', html).each(function() {
-      const title = $(this).text()
-      const url = $(this).find('a').attr('href')
+      const title = $(this).text();
+      const url = $(this).attr('href');
       articles.push({
         title,
         url
