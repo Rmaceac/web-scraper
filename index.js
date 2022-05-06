@@ -11,11 +11,11 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}.`));
 axios(dest)
   .then(res => {
     const html = res.data;
-    console.log(html);
+    // console.log(html);
     const $ = cheerio.load(html);
     const articles = [];
 
-    $('.title', html).each(function() {
+    $('.ad-list-item-link', html).each(function() {
       const title = $(this).text()
       const url = $(this).find('a').attr('href')
       articles.push({
